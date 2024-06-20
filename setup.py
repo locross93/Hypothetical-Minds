@@ -8,9 +8,9 @@ setup(
     name='llm_plan',  # Replace with your package name
     version='0.1.0',  # Replace with your package version
     description='LLM plan for multi-agent systems',  # Provide a short description
-    author='Violet',  # Replace with your name
-    author_email='ziyxiang@stanford.edu',  # Replace with your email
-    url='https://github.com/violetxi/llmv_marl',  # Replace with your repository URL
+    author='Logan',  # Replace with your name
+    author_email='locross93@gmail.com',  # Replace with your email
+    url='https://github.com/locross93/Hypothetical-Minds',  # Replace with your repository URL
     license='LICENSE',  # Specify the license
     packages=find_packages(),
     install_requires=required,
