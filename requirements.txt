@@ -1,0 +1,15 @@
+openai
+gym==0.26.2
+opencv-python
+matplotlib
+pettingzoo[all]==1.23.0
+dm_env
+dm_tree
+dmlab2d
+gymnasium
+ml_collections
+scikit-learn
+# ray[rllib,default]==2.5.0
+# supersuit>=3.7.2
+# torch
+# install meltingpot in editable mode
