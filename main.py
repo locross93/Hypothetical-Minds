@@ -12,8 +12,6 @@ from llm_plan.controller.async_llm import AsyncChatLLM
 from llm_plan.controller.async_gpt_controller import AsyncGPTController
 
 def setup_environment(substrate_name, scenario_num):
-    if substrate_name == 'prisoners_dilemma_in_the_matrix__arena_resident':
-        substrate_name = 'prisoners_dilemma_in_the_matrix__arena'
     sprite_label_path = f'./llm_plan/sprite_labels/{substrate_name}'
     env = MeltingPotLLMEnv(substrate_name, sprite_label_path, scenario_num)
     return env
@@ -114,27 +112,9 @@ async def main_async(substrate_name, scenario_num, agent_type, llm_type):
             "n": 10,
         }
 
-    # pd arena resident scenarios
-    resident_scenarios = [1, 2, 5]
-    if substrate_name == 'prisoners_dilemma_in_the_matrix__arena' and scenario_num in resident_scenarios:
-        if scenario_num == 1:
-            num_agents = 7
-        elif scenario_num == 2:
-            num_agents = 6
-        elif scenario_num == 5:
-            num_agents = 3
-        agent = [
-        setup_agent(api_key, model_id=f"player_{i}", model_settings=model_settings, substrate=substrate_name, agent_type=agent_type, llm_type=llm_type) 
-        for i in range(num_agents)
-        ]
-        substrate_name = 'prisoners_dilemma_in_the_matrix__arena_resident'
-        for agent_ in agent:
-            agent_.agent_type = agent_type 
-            agent_.llm_type = llm_type
-    else:
-        agent = setup_agent(api_key, model_id=f"player_0", model_settings=model_settings, substrate=substrate_name, agent_type=agent_type, llm_type=llm_type)
-        agent.agent_type = agent_type 
-        agent.llm_type = llm_type
+    agent = setup_agent(api_key, model_id=f"player_0", model_settings=model_settings, substrate=substrate_name, agent_type=agent_type, llm_type=llm_type)
+    agent.agent_type = agent_type 
+    agent.llm_type = llm_type
     
     env = setup_environment(substrate_name, scenario_num)
 
@@ -161,7 +141,6 @@ def main():
         'rws': 'running_with_scissors_in_the_matrix__repeated',
         'pd': 'prisoners_dilemma_in_the_matrix__repeated',
         'rws_arena': 'running_with_scissors_in_the_matrix__arena',
-        'pd_arena': 'prisoners_dilemma_in_the_matrix__arena',
     }
     substrate_name = substrate_dict[args.substrate]
     
