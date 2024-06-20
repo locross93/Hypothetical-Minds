@@ -160,7 +160,6 @@ cython_debug/
 
 videos/
 patch_labels/
-vx_api_key.json
 # Ignore everything in the frames/ directory
 frames/**/*.png
 frames/**/**/**/**/*.png
