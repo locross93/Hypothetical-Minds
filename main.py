@@ -1,3 +1,4 @@
+import os
 import time
 import json
 import asyncio
@@ -76,9 +77,9 @@ def setup_agent(api_key, model_id, model_settings, substrate, agent_type, llm_ty
     return agent
 
 async def main_async(substrate_name, scenario_num, agent_type, llm_type):
-    api_key_path = './llm_plan/lc_api_key.json'
-    OPENAI_KEYS = json.load(open(api_key_path, 'r'))
-    api_key = OPENAI_KEYS['API_KEY']
+    api_key = os.getenv('OPENAI_API_KEY')
+    if not api_key:
+        raise ValueError("No API key found. Please set the OPENAI_API_KEY environment variable.")
     if llm_type == 'gpt4':
         model_settings = {
             "model": "gpt-4-1106-preview",
