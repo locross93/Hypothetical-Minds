@@ -11,9 +11,7 @@ setup(
     author_email='locross93@gmail.com',
     url='https://github.com/locross93/Hypothetical-Minds',
     license='LICENSE',
-    install_requires=[
-        'other-dependencies',
-    ],
+    install_requires=required,
     dependency_links=[
         'file:./meltingpot#egg=meltingpot'
     ],
