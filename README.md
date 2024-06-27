@@ -3,6 +3,12 @@
 ## Overview
 Hypothetical Minds is an autonomous LLM-based agent for diverse multi-agent settings, integrating a Theory of Mind module that scaffolds the high-level planning process by generating, evaluating, and refining hypotheses about other agents’ strategies in natural language.
 
+## Installation
+Install **MeltingPot** in editable mode from `https://github.com/locross93/meltingpot`, then install this repo
+```
+pip install -e .
+```
+
 ## Running Hypothetical Minds and Baselines
 
 To run an episode of Hypothetical Minds, use main.py as in the following example with "Running With Scissors Repeated":
