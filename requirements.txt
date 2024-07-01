@@ -10,4 +10,8 @@ gymnasium
 ml_collections
 scikit-learn
 ray[rllib,default]
+omegaconf
+jax==0.4.20
+jaxlib==0.4.20
+chex==0.1.7
 # install custom meltingpot in editable mode
