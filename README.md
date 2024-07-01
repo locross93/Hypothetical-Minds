@@ -13,6 +13,11 @@ Install **MeltingPot** in editable mode from `https://github.com/locross93/melti
 pip install -e .
 ```
 
+Set up your API key with an environment variable:
+```
+export OPENAI_API_KEY=your_api_key_here
+```
+
 ## Running Hypothetical Minds and Baselines
 
 To run an episode of Hypothetical Minds, use main.py as in the following example with "Running With Scissors Repeated":
