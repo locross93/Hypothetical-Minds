@@ -1,6 +1,8 @@
 # Hypothetical-Minds: Scaffolding Theory of Mind for Multi-Agent Tasks with Large Language Models
 
-![Demo](all_games.gif)
+<p align="center">
+  <img src="all_games.gif" width="80%" alt="Demo">
+</p>
 
 ## Overview
 Hypothetical Minds is an autonomous LLM-based agent for diverse multi-agent settings, integrating a Theory of Mind module that scaffolds the high-level planning process by generating, evaluating, and refining hypotheses about other agents’ strategies in natural language.
