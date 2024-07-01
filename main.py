@@ -77,9 +77,12 @@ def setup_agent(api_key, model_id, model_settings, substrate, agent_type, llm_ty
     return agent
 
 async def main_async(substrate_name, scenario_num, agent_type, llm_type):
-    api_key = os.getenv('OPENAI_API_KEY')
-    if not api_key:
-        raise ValueError("No API key found. Please set the OPENAI_API_KEY environment variable.")
+    if llm_type == 'gpt4' or llm_type == 'gpt35':
+        api_key = os.getenv('OPENAI_API_KEY')
+        if not api_key:
+            raise ValueError("No API key found. Please set the OPENAI_API_KEY environment variable.")
+    else:
+        api_key = "EMPTY"
     if llm_type == 'gpt4':
         model_settings = {
             "model": "gpt-4-1106-preview",
