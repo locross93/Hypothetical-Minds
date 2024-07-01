@@ -43,7 +43,7 @@ python run_scenarios.py --agent reflexion --substrate cc --num_seeds 5
 
 ### Using Open Source Models
 
-To run open source models like LLaMA 3, you need to set up vllm first.
+To run open source models like LLaMA 3, you need to set up [vllm](https://github.com/vllm-project/vllm) first.
 
 1. Install vllm:
 ```
