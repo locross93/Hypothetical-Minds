@@ -9,7 +9,5 @@ dmlab2d
 gymnasium
 ml_collections
 scikit-learn
-# ray[rllib,default]==2.5.0
-# supersuit>=3.7.2
-# torch
-# install meltingpot in editable mode
+ray[rllib,default]
+# install custom meltingpot in editable mode

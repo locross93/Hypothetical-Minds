@@ -23,7 +23,6 @@ async def main():
         "running_with_scissors_in_the_matrix__repeated": list(np.arange(9)),
         "running_with_scissors_in_the_matrix__arena": list(np.arange(8)),
         "prisoners_dilemma_in_the_matrix__repeated": list(np.arange(10)),
-        "prisoners_dilemma_in_the_matrix__arena": [0 ,3, 4],
         "collaborative_cooking__asymmetric": list(np.arange(3)),
     }
     
@@ -40,7 +39,6 @@ async def main():
         'rws': 'running_with_scissors_in_the_matrix__repeated',
         'pd': 'prisoners_dilemma_in_the_matrix__repeated',
         'rws_arena': 'running_with_scissors_in_the_matrix__arena',
-        'pd_arena': 'prisoners_dilemma_in_the_matrix__arena'
     }
     substrate_name = substrate_dict[args.substrate]
     
