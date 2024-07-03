@@ -428,11 +428,10 @@ class DecentralizedAgent(abc.ABC):
                 top_hypotheses_summary = f"""Top hypotheses: {self.top_hypotheses}"""
                 hls_response = hls_response + '\n\n' + top_hypotheses_summary+ '\n\n' + response
 
-                # predict next opponent inventory for latest hypothesis and the top 2 so far
+                # predict next opponent inventory for latest hypothesis and the top k so far
                 hls_user_msg3 = self.generate_interaction_feedback_user_message3(step)
                 hls_user_msg = hls_user_msg + '\n\n' + hls_user_msg3
                 user_messages = [hls_user_msg3]
-                system_messages = [self.system_message for i in range(3)]
                 # Sort the keys of self.opponent_hypotheses based on 'value', in descending order
                 sorted_keys = sorted([key for key in self.opponent_hypotheses if key != self.interaction_num],
                         key=lambda x: self.opponent_hypotheses[x]['value'], 
@@ -477,7 +476,6 @@ class DecentralizedAgent(abc.ABC):
                     *[self.controller.async_batch_prompt(self.system_message, [subgoal_user_msg])]
                 )
                 subgoal_response = responses[0][0]
-                #breakpoint()
             else:
                 # skip asking about opponent's strategy when we have a good hypothesis
                 # Sort the keys of self.opponent_hypotheses based on 'value', in descending order
@@ -608,10 +606,8 @@ class DecentralizedAgent(abc.ABC):
             if same_max_item:
                 # update the value of this hypothesis with a Rescorla Wagner update
                 prediction_error = self.correct_guess_reward - self.opponent_hypotheses[key]['value']
-                #self.opponent_hypotheses[key]['value'] = self.opponent_hypotheses[key]['value'] + self.alpha * self.correct_guess_reward
             else:
                 prediction_error = -self.correct_guess_reward - self.opponent_hypotheses[key]['value']
-                #self.opponent_hypotheses[key]['value'] = self.opponent_hypotheses[key]['value'] - self.alpha * self.correct_guess_reward
             self.opponent_hypotheses[key]['value'] = self.opponent_hypotheses[key]['value'] + (self.alpha * prediction_error)
 
             if self.opponent_hypotheses[key]['value'] > self.good_hypothesis_thr:
