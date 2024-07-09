@@ -869,7 +869,6 @@ class DecentralizedAgent(abc.ABC):
                 teammate_action = {'action': 'picked up cooked soup', 'step': step}
                 self.teammate_actions.append(teammate_action)
             elif teammate_prev_holding == 'cooked_soup' and teammate_curr_holding == 'nothing':
-                # TO DO - MAKE THIS BASED ON REWARD AND SIMILAR LOGIC TO ABOVE
                 print(f"Teammate delivered cooked soup")
                 teammate_action = {'action': 'delivered soup', 'step': step}
                 self.teammate_actions.append(teammate_action)

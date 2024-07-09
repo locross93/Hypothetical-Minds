@@ -36,7 +36,6 @@ def setup_agent(api_key, model_id, model_settings, substrate, agent_type, llm_ty
         kwargs = {
             'api_key': "EMPTY",
             'base_url': "http://localhost",
-            #'base_url': "http://localhost:8000/v1",
             'port': 8000,
             'version': 'v1',
             'model': 'meta-llama/Meta-Llama-3-70B-Instruct'

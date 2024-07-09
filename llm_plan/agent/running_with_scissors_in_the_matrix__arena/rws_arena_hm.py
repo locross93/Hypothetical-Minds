@@ -432,7 +432,7 @@ class DecentralizedAgent(abc.ABC):
             Provide the next high-level strategy for your player {self.agent_id}. 
             This response should include step by step reasoning in parts 1-3 about which strategy to select based on the entire interaction history in the following format:
             1. 'Opponents_to_seekout': Given the hypotheses about your opponent's strategies and their values, which players should you seek out to duel with next and why? 
-            If possible, select opponents you have a good hypothesis about so you can exploit it and maximize your reward. Try to select multiple players if possible as one player might be hard to find or respawning.
+            If possible, select opponents you have a good hypothesis about so you can exploit it and maximize your reward. Try to select multiple players if possible as one player might be hard to find or is respawning.
             Are you noticing any patterns across the population as a whole?
             2. 'Opponent_next_inventory': Given the above mentioned guess about the opponent's policy/strategy what is their likely inventory in the next round.
             3. 'My_next_inventory': Given the opponent's likely inventory in the next round, what should your next inventory be to counter this?

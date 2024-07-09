@@ -7,6 +7,10 @@
 ## Overview
 Hypothetical Minds is an autonomous LLM-based agent for diverse multi-agent settings, integrating a Theory of Mind module that scaffolds the high-level planning process by generating, evaluating, and refining hypotheses about other agents’ strategies in natural language.
 
+To learn more:
+- [Research Paper](https://locross93.github.io/HM-Website/)
+- [Hypothetical Minds Project Website](https://locross93.github.io/HM-Website/)
+
 ## Installation
 Install **MeltingPot** in editable mode from `https://github.com/locross93/meltingpot`, then install this repo
 ```
