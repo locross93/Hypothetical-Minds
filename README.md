@@ -8,7 +8,7 @@
 Hypothetical Minds is an autonomous LLM-based agent for diverse multi-agent settings, integrating a Theory of Mind module that scaffolds the high-level planning process by generating, evaluating, and refining hypotheses about other agents’ strategies in natural language.
 
 To learn more:
-- [Research Paper](https://locross93.github.io/HM-Website/)
+- [Research Paper](https://arxiv.org/abs/2407.07086/)
 - [Hypothetical Minds Project Website](https://locross93.github.io/HM-Website/)
 
 ## Installation
