@@ -105,11 +105,6 @@ def fire_at(src, src_orient, target):
     actions.append('FIRE_ZAP')
     return actions, target_orient
 
-# def interact(src, src_orient, target):
-#     target_orient = get_direction(src, target)
-#     actions = turn_to_face(src_orient, target_orient)
-#     actions.append('INTERACT')
-#     return actions, target_orient
 
 def interact(src, src_orient, target, grid):
     # collaborative cooking asymmetric interaction
